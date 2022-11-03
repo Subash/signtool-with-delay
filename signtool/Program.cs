@@ -17,7 +17,6 @@ class Program
         string signToolPath = Path.Join(execDir, "real-signtool.exe");
 
         ProcessStartInfo startInfo = new ProcessStartInfo(signToolPath);
-
         startInfo.CreateNoWindow = true;
         startInfo.UseShellExecute = false;
         startInfo.RedirectStandardError = true;
