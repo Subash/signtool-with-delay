@@ -28,6 +28,8 @@ class Program
         }
 
         Process process = Process.Start(startInfo);
+        Console.Error.Write(process.StandardError.ReadToEnd());
+        Console.Write(process.StandardOutput.ReadToEnd());
         process.WaitForExit();
         int exitCode = process.ExitCode;
         process.Close();
